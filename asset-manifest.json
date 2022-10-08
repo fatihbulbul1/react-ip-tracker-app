@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-ip-geolocation-app/static/css/main.cbdbb6e1.css",
-    "main.js": "/react-ip-geolocation-app/static/js/main.173c514c.js",
-    "static/media/pattern-bg.png": "/react-ip-geolocation-app/static/media/pattern-bg.a60a3c85aa8b88aac4b7.png",
-    "index.html": "/react-ip-geolocation-app/index.html",
-    "main.cbdbb6e1.css.map": "/react-ip-geolocation-app/static/css/main.cbdbb6e1.css.map",
-    "main.173c514c.js.map": "/react-ip-geolocation-app/static/js/main.173c514c.js.map"
+    "main.css": "/react-ip-tracker-app/static/css/main.0a291f38.css",
+    "main.js": "/react-ip-tracker-app/static/js/main.173c514c.js",
+    "static/media/pattern-bg.png": "/react-ip-tracker-app/static/media/pattern-bg.a60a3c85aa8b88aac4b7.png",
+    "index.html": "/react-ip-tracker-app/index.html",
+    "main.0a291f38.css.map": "/react-ip-tracker-app/static/css/main.0a291f38.css.map",
+    "main.173c514c.js.map": "/react-ip-tracker-app/static/js/main.173c514c.js.map"
   },
   "entrypoints": [
-    "static/css/main.cbdbb6e1.css",
+    "static/css/main.0a291f38.css",
     "static/js/main.173c514c.js"
   ]
 }
