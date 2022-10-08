@@ -1,23 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import {useEffect, useState} from "react";
+import Info from "./components/Info";
+import MapElement from "./components/MapElement";
+import Search from "./components/Search";
 
-function App() {
+const App = () => {
+  const [valid, setValid] = useState(true);
+  const [address, setAddress] = useState({
+    ip: "",
+    city: "",
+    country: "",
+    utc_offset: "",
+    org: "",
+  });
+  const [position, setPosition] = useState([0,0]);
+  const handleFetch = (ip) =>{
+    fetch(`https://ipapi.co/${ip}/json/`)
+    .then(response => {
+      if(response.ok){
+        setValid(true)
+        response.json()
+        .then(data =>{
+          setAddress(data)
+          setPosition([data.latitude, data.longitude])
+        })
+      }
+      else {
+        setValid(false)
+        setAddress(
+          {
+            ip: "",
+            city: "",
+            country: "",
+            utc_offset: "",
+            org: "",
+          }
+        )
+        throw new Error("Invalid IP address")
+      }
+    })
+  }
+  useEffect(() =>{
+    fetch(process.env.REACT_APP_API_KEY)
+    .then((res) => res.json())
+    .then(data => handleFetch(data.IPv4))
+  },[])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Search valid={valid} handleFetch={handleFetch}/>
+      <Info bool={address.utc_offset} address={address} />
+      <MapElement position={position} />
     </div>
   );
 }
