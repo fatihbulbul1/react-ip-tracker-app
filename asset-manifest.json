@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/react-ip-geolocation-app/static/css/main.cbdbb6e1.css",
+    "main.js": "/react-ip-geolocation-app/static/js/main.173c514c.js",
+    "static/media/pattern-bg.png": "/react-ip-geolocation-app/static/media/pattern-bg.a60a3c85aa8b88aac4b7.png",
+    "index.html": "/react-ip-geolocation-app/index.html",
+    "main.cbdbb6e1.css.map": "/react-ip-geolocation-app/static/css/main.cbdbb6e1.css.map",
+    "main.173c514c.js.map": "/react-ip-geolocation-app/static/js/main.173c514c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cbdbb6e1.css",
+    "static/js/main.173c514c.js"
+  ]
+}
